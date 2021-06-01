@@ -1,0 +1,18 @@
+package com.cos.photogramstart.service;
+
+import org.springframework.stereotype.Service;
+
+import com.cos.photogramstart.domain.subscribe.Subscribe;
+
+@Service
+public class SubscribeService {
+	
+	public void 구독하기() {
+		
+		
+	}
+	
+	public void 구독취소하기() {
+		
+	}
+}

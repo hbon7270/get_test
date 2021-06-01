@@ -1,0 +1,22 @@
+package com.cos.photogramstart.web.api;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+//@Controller //파일명 컨트롤 할때 사용하는 어노테이션
+@RestController //데이터 컨트롤 할때 사용하는 어노테이션
+public class SubscribeApiController {
+
+	@PostMapping("/api/subscribe/{toUserId}") //구독하기
+	public ResponseEntity<?> subscribe(){
+		return null;
+	}
+	
+	@DeleteMapping("/api/subscribe/{toUserId}") //구독취소하기
+	public ResponseEntity<?> subscribe(){
+		return null;
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.cos.photogramstart.web.dto;
+
+public class CMRespDto {
+	
+	private String message;
+	private Map<String, String> errorMap;
+}

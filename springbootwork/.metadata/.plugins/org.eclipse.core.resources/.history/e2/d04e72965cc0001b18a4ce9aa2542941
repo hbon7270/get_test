@@ -1,0 +1,22 @@
+package com.cos.photogramstart.service;
+
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Service;
+
+import com.cos.photogramstart.domain.subscribe.Subscribe;
+
+@Service
+public class SubscribeService {
+	
+	@Transactional
+	public void 구독하기(int fromUserId, int toUserId) {
+		
+		
+	}
+	
+	@Transactional
+	public void 구독취소하기(int fromUserId, int toUserId) {
+		
+	}
+}

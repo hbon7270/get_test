@@ -1,0 +1,8 @@
+package com.cos.controllerdemo;
+
+public class HttpBodyController {
+	
+	public String xwwwform() {
+		
+	}
+}

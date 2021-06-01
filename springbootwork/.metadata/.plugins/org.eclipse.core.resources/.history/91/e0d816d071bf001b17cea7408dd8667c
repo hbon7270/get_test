@@ -1,0 +1,7 @@
+package com.cos.controllerdemo.web;
+
+public class HttpController {
+	public String get() {
+		
+	}
+}

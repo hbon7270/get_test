@@ -1,0 +1,16 @@
+package com.cos.controllerdemo;
+
+public class HttpBodyController {
+	
+	public String xwwwform() {
+		
+	}
+	
+	public String plaintext() {
+		
+	}
+	
+	public String applicationjson() {
+		
+	}
+}

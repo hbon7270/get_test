@@ -1,0 +1,15 @@
+server:
+  port: 9997
+  servlet:
+    context-path: /
+    encoding:
+      charset: utf-8
+      enabled: true
+    
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+ 

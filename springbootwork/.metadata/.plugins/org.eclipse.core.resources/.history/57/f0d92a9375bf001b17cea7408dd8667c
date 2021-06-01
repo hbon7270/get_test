@@ -1,0 +1,16 @@
+package com.cos.controllerdemo;
+
+public class HttpBodyController {
+	
+	public String xwwwform("/bodt1") {
+		return "key=value 전송홈";
+	}
+	
+	public String plaintext("/bodt2") {
+		return "key=value 전송홈"
+	}
+	
+	public String applicationjson("/bodt3") {
+		
+	}
+}

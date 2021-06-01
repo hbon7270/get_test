@@ -1,0 +1,19 @@
+package com.cos.controllerdemo;
+
+import org.springframework.web.bind.annotation.PostMapping;
+
+public class HttpBodyController {
+	
+	@PostMapping("/body1")
+	public String xwwwform() {
+		return "key=value 전송옴";
+	}
+	@PostMapping("/body2")
+	public String plaintext() {
+		return "key=text 전송옴";
+	}
+	@PostMapping("/body3")
+	public String applicationjson() {
+		return "key=json 전송옴";
+	}
+}

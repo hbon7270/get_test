@@ -1,0 +1,24 @@
+package com.cos.photogramstart.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
+@EnableWebSecurity //해당 파일로 시큐리티를 활성화
+@Configuration //IoC  
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
+	
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		//super 삭제 - 기존 시큐리티가 가지고 있는 기능이 다 비활성화됨.
+		
+		http.authorizeRequests()
+		.antMatchers("/","/user/**","/image/**","/subscribe/**","/comment/**").authenticated() //해당 주소들로 접속할 시 권한을 부여한다.
+		.anyRequest().permitAll(); //그 나머지 주소들은 허용한다.
+		.and()
+		.formLogin()
+		.loginPage("/auth/signin")
+	}
+	
+}

@@ -1,0 +1,61 @@
+package com.cos.photogramstart.service;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.cos.photogramstart.domain.subscribe.Subscribe;
+import com.cos.photogramstart.domain.subscribe.SubscribeRepository;
+import com.cos.photogramstart.handler.ex.CustomApiException;
+import com.cos.photogramstart.web.dto.subscribe.SubscribeDto;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor // 생성자 어노테이션
+@Service
+public class SubscribeService {
+
+	private final SubscribeRepository subscribeRepository; // 생성자 필요
+	private final EntityManager em; //Repository는 EntityManager를 구현해서 
+
+	@Transactional(readOnly=true) //select 진행하기 때문에 readOnly=true
+	public List<SubscribeDto> 구독리스트(int principalId, int pageUserId){
+		
+		
+		return null;
+	}
+	
+	
+	
+//	@Transactional
+//	public int 구독하기(int fromUserId, int toUserId) {
+	
+	
+	
+	@Transactional
+	public void 구독하기(int fromUserId, int toUserId) {
+//		int result = subscribeRepository.mSubscribe(fromUserId, toUserId);
+		
+		try {
+			subscribeRepository.mSubscribe(fromUserId, toUserId);
+		}catch(Exception e){
+			throw new CustomApiException("이미 구독을 하였습니다.");
+		}
+		
+//		subscribeRepository.mSubscribe(fromUserId, toUserId);
+		
+//		return result;
+	}
+
+	
+	
+	
+	@Transactional
+	public void 구독취소하기(int fromUserId, int toUserId) {
+		subscribeRepository.mUnSubscribe(fromUserId, toUserId);
+		
+	}
+}

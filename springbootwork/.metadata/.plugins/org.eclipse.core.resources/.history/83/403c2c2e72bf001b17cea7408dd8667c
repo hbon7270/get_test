@@ -1,0 +1,33 @@
+package com.cos.controllerdemo.web;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HttpController {
+	
+	//http://localhost:9996/get
+	@GetMapping("/get")
+	public String get() {
+		
+	}
+	@PostMapping
+	//http://localhost:9996/post
+	public String post("/post") {
+		
+	}
+	@PutMapping
+	//http://localhost:9996/get
+	public String put("/put") {
+		
+	}
+	@DeleteMapping
+	//http://localhost:9996/get
+	public String delete("/delete") {
+		
+		
+	}
+}

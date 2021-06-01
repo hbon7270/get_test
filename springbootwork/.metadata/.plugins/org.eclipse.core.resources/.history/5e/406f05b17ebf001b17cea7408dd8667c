@@ -1,0 +1,12 @@
+package com.cos.controllerdemo.web;
+
+public class HttpRedirectionController {
+	
+	public String home() {
+		
+	}
+	
+	public String away() {
+		
+	}
+}
